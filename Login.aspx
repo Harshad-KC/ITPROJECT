@@ -1,8 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebSite6/MasterPage.master" AutoEventWireup="true" CodeFile="Register.aspx.cs" Inherits="_Default" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/WebSite6/MasterPage.master" AutoEventWireup="true" CodeFile="Login.aspx.cs" Inherits="_Default" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolder2" Runat="Server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder3" Runat="Server">
+
+
     <style type="text/css">
     table
 {
@@ -20,10 +22,10 @@
         font-size:20px;
         text-align:start;
     }
-     .h1{
+    .h1{
         position:absolute;
-        margin-left:610px;
-        margin-top:380px;
+        margin-left:520px;
+        margin-top:350px;
     }
         </style>
 
@@ -32,7 +34,7 @@
 <table align="Center"  height="170px" font-size="200px" width="350px">
 <tr>
 <td font-size="200px">
-Gaurdian:
+Username:
 
 <asp:TextBox ID="txtUserName" runat="server"/>
 <asp:RequiredFieldValidator ID="rfvUser" ErrorMessage="Please enter Username" ControlToValidate="txtUserName" runat="server" />
@@ -40,26 +42,21 @@ Gaurdian:
 </tr>
 <tr>
 <td font-size="200px">
-Password:  
+Password :  
 
 <asp:TextBox ID="txtPWD" runat="server" TextMode="Password" />
 <asp:RequiredFieldValidator ID="rfvPWD" runat="server" ControlToValidate="txtPWD" ErrorMessage="Please enter Password"/>
 </td>
 </tr>
- <tr>
-<td font-size="200px">
-User--ID:
-<asp:TextBox ID="ID" runat="server"  />
-<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="ID" ErrorMessage="Please enter ID"/>
-</td>
-</tr>
 <tr>
 <td colspan="2" align="center">
-<asp:Button ID="btnSubmit" runat="server" Text="Register" OnClick="Register" font-size="20px"/>
+<asp:Button ID="btnSubmit" runat="server" Text="Submit"  font-size="20px" OnClick="check"/>
 </td>
 </tr>
 </table>
-<asp:HyperLink CssClass="h1" runat="server" Text="LOGIN" OnLoad="newpage"></asp:HyperLink>
+<asp:Button ID="newpage" Class="h1"  runat="server" Text="New user,click to register!!" margin-left="400px" Font-Size="25px" OnClick="register" CausesValidation="false"/>
 </div>
+
+
 </asp:Content>
 

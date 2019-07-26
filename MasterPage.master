@@ -1,8 +1,9 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
 
 <!DOCTYPE html>
+
 <html>
-<head runat="server">
+    <head runat="server">
     <title></title>
     <asp:ContentPlaceHolder id="ContentPlaceHolder2" runat="server">
     </asp:ContentPlaceHolder>
@@ -27,4 +28,3 @@
     </form>
 </body>
 </html>
-

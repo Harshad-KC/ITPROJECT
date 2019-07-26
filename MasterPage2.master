@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="MasterPage2" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage2.master.cs" Inherits="WebSite6_MasterPage2" %>
 
 <!DOCTYPE html>
 
@@ -7,12 +7,25 @@
     <title></title>
     <asp:ContentPlaceHolder id="head" runat="server">
     </asp:ContentPlaceHolder>
+    <style>
+        .label1{
+            position:absolute;
+            margin-left:550px;
+            margin-top:2px;
+            width:500px;
+            height:120px;
+        }
+      
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
+         <asp:Label ID="label1" class="label1" 
+              runat="server" Font-Italic="true" Font-Size="XX-Large"></asp:Label>
+           
         <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
-        
+       
         </asp:ContentPlaceHolder>
     </div>
     </form>
